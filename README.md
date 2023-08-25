@@ -53,7 +53,7 @@ json
 
 #### Actual implementation + derived annotations
 
-In actuality, the technical specs that platform has defined* would have each condition be represented as distinct attributes with `TRUE` or `FALSE` values to enable something called derived annotations. 
+In actuality, according to the platform technical specs[^spec] each condition should be represented as distinct attributes with `TRUE` or `FALSE` values to enable something called derived annotations. 
 
 That means metadata on a file would look like this:
 
@@ -72,8 +72,6 @@ json
 ```
 
 More than materalization (which is what this is) of simple new values, potentially we can also apply access controls dynamically based on attributes. That is, **we can match the file to the right access requirement id based on its attributes**.
-
-*See the original internal tech specs here.
 
 
 ## The good ideas behind DUO/DUO-plus and derived annotations
@@ -137,3 +135,4 @@ As shown, we have to make use of JSON schema. However, JSON schema is perhaps no
 
 
 
+[^spec]: https://sagebionetworks.jira.com/wiki/spaces/PLFM/pages/2597617665/API+Changes+to+support+Extension+of+Data+Access+Management+to+Users+outside+of+Sage+ACT
