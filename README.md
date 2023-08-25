@@ -76,32 +76,32 @@ More than materalization (which is what this is) of simple new values, potential
 *See the original internal tech specs here.
 
 
-### The good ideas behind DUO/DUO-plus and derived annotations
+## The good ideas behind DUO/DUO-plus and derived annotations
 
-#### Attribute Based Access Control (ABAC)
+### Attribute Based Access Control (ABAC)
 
 What has been described above with DUO represents something closer to [Attribute Based Access Control (ABAC)](https://csrc.nist.gov/Projects/attribute-based-access-control), which would be really powerful. For example, the NIST reference describes that one benefit is "more dynamic access control capability as access decisions can change between requests when attribute values change".
 
 <...more>
 
-#### More understandable and interoperable governance
+### More understandable and interoperable governance
 
 By using DUO, we align with other repositories that use DUO and this should make it easier to potentially compare or exchange data. 
 Distilling governance language into standard attributes also makes it easier to understand the governance aspects of the data, both for machines and people.  
 
-#### Transparency and findability
+### Transparency and findability
 
 By having governance metadata be explicit on the assets, users can better search for data and see what to expect. For example, it can be really helpful to be able to filter for data that *does* allow commercial use or *does not* need an IRB. Otherwise, it is a matter of having to read through the project docs or trying to download a file before it's clear what the terms and conditions are.
 
 <...more>
 
-#### Derived annotations is great for other use cases, not just governance
+### Derived annotations is great for other use cases, not just governance
 
 <...more>
 
-### The complexities and hard stuff
+## The complexities and hard stuff
 
-#### Nuances of governance scoping and current lack of standardization
+### Nuances of governance scoping and current lack of standardization
 
 Governance is complicated, and DUO-plus inherits complicated governance context.
 
@@ -125,16 +125,15 @@ Adopting this governance schema registry can help keep governance metadata consi
 1. All DCCs on the platform would need to be using the same attributes and values, which is currently not the case.
 2. We need all governance analysts, data managers, engineers to have understanding of JSON schemas, which is not the case. But the real problem may be that JSON schema is not the right language.
 
-#### Challenge of getting and applying metadata
+### Challenge of getting and applying metadata
 
 It is difficult to get all the metadata that we'd want and apply them. While the metadata on the files would allow more scalable governance and fine-grained access control, the process of transferring metadata is definitely burdensome. 
 
-#### JSON schema may be a hurdle
+### JSON schema may be a hurdle
 
 As shown, we have to make use of JSON schema. However, JSON schema is perhaps not right for several reasons:
 - It is very verbose, and from our experience many colleagues would have trouble using it to compose rules. 
 - It is not expressive enough for complicated situations, and governance often has complicated situations. 
 
 
-### Other Thoughts
 
