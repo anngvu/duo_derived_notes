@@ -123,7 +123,7 @@ Adopting this governance schema registry can help keep governance metadata consi
 
 **However, the major problems for these "reusable" schemas to work are:**
 1. All DCCs on the platform would need to be using the same attributes and values, which is currently not the case.
-2. We need more people with understanding of JSON schemas, which is not the case. But the real problem may be that JSON schema is not the right language.
+2. We need all governance analysts, data managers, engineers to have understanding of JSON schemas, which is not the case. But the real problem may be that JSON schema is not the right language.
 
 #### Challenge of getting and applying metadata
 
@@ -134,7 +134,7 @@ It is difficult to get all the metadata that we'd want and apply them. While the
 As shown, we have to make use of JSON schema. However, JSON schema is perhaps not right for several reasons:
 - It is very verbose, and from our experience many colleagues would have trouble using it to compose rules. 
 - It is not expressive enough for complicated situations, and governance often has complicated situations. 
-- 
+
 
 ### Other Thoughts
 
