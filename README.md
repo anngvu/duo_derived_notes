@@ -82,7 +82,7 @@ What has been described above with DUO represents something closer to [Attribute
 
 <...more>
 
-### More understandable and interoperable governance
+### Interoperable governance
 
 By using DUO, we align with other repositories that use DUO and this should make it easier to potentially compare or exchange data. 
 Distilling governance language into standard attributes also makes it easier to understand the governance aspects of the data, both for machines and people.  
@@ -93,7 +93,11 @@ By having governance metadata be explicit on the assets, users can better search
 
 <...more>
 
-### Derived annotations is great for other use cases, not just governance
+### Governance as code? More scability.
+
+The translation of Word docs and emails to eventual governance controls such as click-wraps, etc. can be hard to trace, i.e. it can sometimes hard to follow the "deployment" of these governance controls. However, using JSON schemas to encode governance logic is like giving us code that explains the governance controls downstream. And it is all there for other DCC staff to later consult and even potentially contribute to. In fact, perhaps that the new framework would enable more scalable governance, as other DCC staff could more directly update the JSON schema / governance config.      
+
+### Bonus: Derived annotations is great for other use cases, not just governance!
 
 <...more>
 
