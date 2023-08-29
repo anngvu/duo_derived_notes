@@ -119,7 +119,7 @@ The "global rules" may also be called "platform-scoped rules".
 
 These rules should be maintained by the governance team, who keeps abreast of laws and regulations and are also the experts of what are general governance conditions should be applied. For example, aside from the HIPAA/GDPR example, perhaps a general rule that could be applied across Synapse is the classification/labeling of data into "sensitive" categories based on the data type and species.
 
-To do that, we would need to register a central and reusable governance schema registry that each DCC can reference. 
+**To do that, we would need to register a central and reusable governance schema registry that each DCC can reference.** 
 Each DCC project can import these rules (which are subschemas) as needed when formulating the final schema for a dataset.
 Adopting this governance schema registry can help keep governance metadata consistent accross the platform.
 
