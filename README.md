@@ -71,14 +71,16 @@ json
 
 ```
 
-More than materalization (which is what this is) of simple new values, potentially we can also apply access controls dynamically based on attributes. That is, **we can match the file to the right access requirement id based on its attributes**.
+More than materalization (which is what this is) of simple new values, potentially we can also apply access controls dynamically based on attributes. That is, **we can "automatically" match the file to the right access requirement id based on its attributes**.
 
 
 ## The good ideas behind DUO/DUO-plus and derived annotations
 
 ### Attribute Based Access Control (ABAC)
 
-What has been described above with DUO represents something closer to [Attribute Based Access Control (ABAC)](https://csrc.nist.gov/Projects/attribute-based-access-control), which would be really powerful. For example, the NIST reference describes that one benefit is "more dynamic access control capability as access decisions can change between requests when attribute values change".
+What has been described above with DUO represents something closer to [Attribute Based Access Control (ABAC)](https://csrc.nist.gov/Projects/attribute-based-access-control), which would be really powerful. 
+For example, the NIST reference describes that one benefit is "more dynamic access control capability as access decisions can change between requests when attribute values change". 
+Thus, making an update to an entity attribute and re-match the appropriate AR immediately -- so potentially more efficient governance.   
 
 <...more>
 
@@ -131,6 +133,16 @@ Adopting this governance schema registry can help keep governance metadata consi
 
 It is difficult to get all the metadata that we'd want and apply them. While the metadata on the files would allow more scalable governance and fine-grained access control, the process of transferring metadata is definitely burdensome. 
 
+### Need more enablement in tooling
+
+Using DUO with derived annotations means being aware of and knowing how to use the relevant platform API services[^json-schema-services]. 
+However, these have not made it yet to the Python or R clients, so one must drop down to using the API at the low-level. 
+Unfortunately, **most DCC staff manage data on the Synapse platform with the Python or R clients**, thus they have not really "seen" these utilities and therefore gotten the chance to experiment. 
+Over the long run, having these features programmable through the clients would fit in better with the current workflow of most DCC staff.
+
+DUO values can be applied at several levels, from files to datasets to projects. Current tooling supports transferring DUO values most easily to the granular file levels. 
+On the other hand, applying DUO values at other levels may be desirable as well and could perhaps be incorporated into current tooling. 
+
 ### JSON schema may be a hurdle
 
 As shown, we have to make use of JSON schema. However, JSON schema is perhaps not right for several reasons:
@@ -140,3 +152,4 @@ As shown, we have to make use of JSON schema. However, JSON schema is perhaps no
 
 
 [^spec]: https://sagebionetworks.jira.com/wiki/spaces/PLFM/pages/2597617665/API+Changes+to+support+Extension+of+Data+Access+Management+to+Users+outside+of+Sage+ACT
+[^json-schema-services]: https://rest-docs.synapse.org/rest/index.html#org.sagebionetworks.repo.web.controller.JsonSchemaController
